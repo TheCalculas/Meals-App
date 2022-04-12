@@ -1,3 +1,5 @@
+This is the front-end of the Recipe App in which you can save your favorite recipe and search for recipes 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
