@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 function FCard({ dishes }) {
   return (
-    <div>
+    <div key={dishes.idMeal}>
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={dishes.strMealThumb} />
         <Card.Body>

@@ -1,7 +1,18 @@
-import React from "react";
+import axios from "axios";
+import { React, useState, useContext } from "react";
 import { FormControl, InputGroup, Button } from "react-bootstrap";
-import "./app.css";
+import { MyContext } from "../../context.js";
+import "./style.css";
 export default function JumbotronExample() {
+  const [searchInput, setsearchInput] = useState("");
+  const { setMeals } = useContext(MyContext);
+  const handleSearch = () => {
+    axios
+      .get(
+        `https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchInput}`
+      )
+      .then(({ data }) => setMeals(data.meals));
+  };
   return (
     <div className="back">
       <InputGroup className="mb-3 inputs">
@@ -9,8 +20,14 @@ export default function JumbotronExample() {
           placeholder="Food"
           aria-label="Recipient's username"
           aria-describedby="basic-addon2"
+          value={searchInput}
+          onChange={(event) => {
+            setsearchInput(event.target.value);
+          }}
         />
-        <Button variant="success">Search</Button>{" "}
+        <Button variant="success" onClick={handleSearch}>
+          Search
+        </Button>{" "}
       </InputGroup>
     </div>
   );
