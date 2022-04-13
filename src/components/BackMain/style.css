@@ -1,19 +1,28 @@
 .back {
   background: linear-gradient(270deg, #19f0b9, #19bef0);
-  background-size: 400% 400%;
-
+  /* background-size: 400% 400%; */
+  /* width: 100vw !important; */
+  overflow: hidden;
   -webkit-animation: AnimationName 4s ease infinite;
   -moz-animation: AnimationName 4s ease infinite;
   animation: AnimationName 4s ease infinite;
   height: 50vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .inputs {
-  width: 30vw !important;
+  width: 40vw !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
+.write {
+  height: 2.3rem !important;
+  margin: 0 !important;
+}
+
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 50%;

@@ -7,7 +7,7 @@ function AllMeals({ meals }) {
     <div className="dish-container">
       {meals.map((dish) => (
         // <div key={dish.idMeal}>{dish.strMeal}</div>
-        <FoodCards dishes={dish} />
+        <FoodCards key={dish.idMeal} dishes={dish} />
       ))}
     </div>
   );

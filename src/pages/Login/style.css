@@ -1,0 +1,14 @@
+main {
+  display: flex;
+  width: 100vw;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  width: 20em !important;
+  /* margin-bottom: 1em !important; */
+}
+button {
+  margin-top: 1em !important;
+}
